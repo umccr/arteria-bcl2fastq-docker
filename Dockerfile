@@ -26,7 +26,7 @@ ENV SERVICE_PORT=80
 ENV CONF_DIR="$SERVICE_DIR/config/"
 
 RUN mkdir -p $SERVICE_DIR \
-    && git clone https://github.com/arteria-project/arteria-bcl2fastq.git $SERVICE_DIR
+    && git clone https://github.com/umccr/arteria-bcl2fastq.git $SERVICE_DIR
 
 COPY app.config $CONF_DIR
 RUN pip install -r $SERVICE_DIR/requirements/dev $SERVICE_DIR
